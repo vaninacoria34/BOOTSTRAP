@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Bootstrap</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS separado -->
+  <style>
+    .was-validated .form-control:invalid {
+      border-color: #dc3545;
+      padding-right: calc(1.5em + .75rem);
+    }
+    .was-validated .form-control:valid {
+      border-color: #28a745;
+      padding-right: calc(1.5em + .75rem);
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Formulario con bootstrap</h2>
+    <button id="toggleContrast" class="btn btn-secondary mb-3">Cambiar Contraste</button>
+    <form class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="firstName">Nombre</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Nombre" required aria-required="true" aria-describedby="firstNameHelp">
+        <small id="firstNameHelp" class="form-text text-muted">Ingrese su nombre.</small>
+        <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Apellido</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Apellido" required aria-required="true" aria-describedby="lastNameHelp">
+        <small id="lastNameHelp" class="form-text text-muted">Ingrese su apellido.</small>
+        <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" required aria-required="true" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">Ingrese un email válido.</small>
+        <div class="invalid-feedback">Por favor, ingrese un email válido.</div>
+      </div>
+      <div class="form-group">
+        <label for="dob">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="dob" required aria-required="true" aria-describedby="dobHelp">
+        <small id="dobHelp" class="form-text text-muted">Ingrese su fecha de nacimiento.</small>
+        <div class="invalid-feedback">Por favor, ingrese su fecha de nacimiento.</div>
+      </div>
+      <div class="form-group">
+        <label for="country">País de Residencia</label>
+        <select class="form-control" id="country" required aria-required="true" aria-describedby="countryHelp">
+          <option value="">Seleccione un país</option>
+          <option value="AR">Argentina</option>
+          <option value="BR">Brasil</option>
+          <option value="CL">Chile</option>
+          <option value="CO">Colombia</option>
+          <option value="MX">México</option>
+          <option value="PE">Perú</option>
+          <option value="ES">España</option>
+          <option value="US">Estados Unidos</option>
+        </select>
+        <small id="countryHelp" class="form-text text-muted">Seleccione su país de residencia.</small>
+        <div class="invalid-feedback">Por favor, seleccione su país de residencia.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
