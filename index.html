@@ -6,16 +6,6 @@
   <title>Formulario con Bootstrap</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .was-validated .form-control:invalid {
-      border-color: #dc3545;
-      padding-right: calc(1.5em + .75rem);
-    }
-    .was-validated .form-control:valid {
-      border-color: #28a745;
-      padding-right: calc(1.5em + .75rem);
-    }
-  </style>
 </head>
 <body>
   <div class="container mt-5">
@@ -25,32 +15,32 @@
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="firstName">Nombre</label>
-          <input type="text" class="form-control" id="firstName" placeholder="Nombre" required aria-required="true" aria-describedby="firstNameHelp">
+          <input type="text" class="form-control" id="firstName" placeholder="Nombre">
           <small id="firstNameHelp" class="form-text text-muted">Ingrese su nombre.</small>
           <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
         </div>
         <div class="col-md-6 mb-3">
           <label for="lastName">Apellido</label>
-          <input type="text" class="form-control" id="lastName" placeholder="Apellido" required aria-required="true" aria-describedby="lastNameHelp">
+          <input type="text" class="form-control" id="lastName" placeholder="Apellido">
           <small id="lastNameHelp" class="form-text text-muted">Ingrese su apellido.</small>
           <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
         </div>
       </div>
       <div class="mb-3">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Email" required aria-required="true" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="email" placeholder="Email">
         <small id="emailHelp" class="form-text text-muted">Ingrese un email válido.</small>
         <div class="invalid-feedback">Por favor, ingrese un email válido.</div>
       </div>
       <div class="mb-3">
         <label for="dob">Fecha de Nacimiento</label>
-        <input type="date" class="form-control" id="dob" required aria-required="true" aria-describedby="dobHelp">
+        <input type="date" class="form-control" id="dob">
         <small id="dobHelp" class="form-text text-muted">Ingrese su fecha de nacimiento.</small>
         <div class="invalid-feedback">Por favor, ingrese su fecha de nacimiento.</div>
       </div>
       <div class="mb-3">
         <label for="country">País de Residencia</label>
-        <select class="form-control" id="country" required aria-required="true" aria-describedby="countryHelp">
+        <select class="form-control" id="country">
           <option value="">Seleccione un país</option>
           <option value="AR">Argentina</option>
           <option value="BR">Brasil</option>
