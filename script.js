@@ -2,6 +2,7 @@
 
   window.addEventListener('load', function () { // Espera a que la página se cargue completamente.
     var forms = document.getElementsByClassName('needs-validation'); // Obtiene todos los formularios con la clase 'needs-validation'.
+    var successMessage = document.getElementById('successMessage'); // Obtiene el contenedor del mensaje de éxito.
 
     Array.prototype.forEach.call(forms, function (form) { // Itera sobre cada formulario.
       form.addEventListener('submit', function (event) { // Agrega un evento de envío al formulario.
@@ -59,8 +60,15 @@
         if (form.checkValidity() === false) { // Verifica si el formulario es válido.
           event.preventDefault(); // Previene el envío del formulario si es inválido.
           event.stopPropagation(); // Detiene la propagación del evento.
+        } else {
+          successMessage.classList.remove('d-none'); // Muestra el mensaje de éxito.
+          successMessage.classList.add('fade-out'); // Añade la clase para la animación de desvanecimiento.
+          setTimeout(function () {
+            successMessage.classList.add('hide'); // Añade la clase para ocultar el mensaje lentamente.
+          }, 3000); // Cambia 3000ms al tiempo que desees que el mensaje permanezca visible.
+          form.classList.add('was-validated');
+          event.preventDefault(); // Previene el envío del formulario para mostrar el mensaje de éxito.
         }
-        form.classList.add('was-validated'); // Añade una clase para mostrar los mensajes de validación.
       }, false);
     });
 
