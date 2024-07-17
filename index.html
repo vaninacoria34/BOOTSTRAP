@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario con Bootstrap</title>
+  <!-- Incluye el CSS de Bootstrap desde un CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Incluye estilos personalizados -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container mt-5">
+    <!-- Título del formulario -->
     <h2>Formulario de Registro</h2>
+    <!-- Botón para cambiar el contraste -->
     <button id="toggleContrast" class="btn btn-secondary mb-3">Cambiar Contraste</button>
+    <!-- Formulario con clases de Bootstrap para validación -->
     <form class="needs-validation" novalidate>
       <div class="row">
+        <!-- Campo de entrada para el nombre -->
         <div class="col-md-6 mb-3">
           <label for="firstName">Nombre</label>
           <input type="text" class="form-control" id="firstName" placeholder="Nombre">
           <small id="firstNameHelp" class="form-text text-muted">Ingrese su nombre.</small>
           <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
         </div>
+        <!-- Campo de entrada para el apellido -->
         <div class="col-md-6 mb-3">
           <label for="lastName">Apellido</label>
           <input type="text" class="form-control" id="lastName" placeholder="Apellido">
@@ -26,18 +33,21 @@
           <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
         </div>
       </div>
+      <!-- Campo de entrada para el email -->
       <div class="mb-3">
         <label for="email">Email</label>
         <input type="email" class="form-control" id="email" placeholder="Email">
         <small id="emailHelp" class="form-text text-muted">Ingrese un email válido.</small>
         <div class="invalid-feedback">Por favor, ingrese un email válido.</div>
       </div>
+      <!-- Campo de entrada para la fecha de nacimiento -->
       <div class="mb-3">
         <label for="dob">Fecha de Nacimiento</label>
         <input type="date" class="form-control" id="dob">
         <small id="dobHelp" class="form-text text-muted">Ingrese su fecha de nacimiento.</small>
         <div class="invalid-feedback">Por favor, ingrese su fecha de nacimiento.</div>
       </div>
+      <!-- Campo de selección para el país de residencia -->
       <div class="mb-3">
         <label for="country">País de Residencia</label>
         <select class="form-control" id="country">
@@ -54,13 +64,18 @@
         <small id="countryHelp" class="form-text text-muted">Seleccione su país de residencia.</small>
         <div class="invalid-feedback">Por favor, seleccione su país de residencia.</div>
       </div>
+      <!-- Botón para enviar el formulario -->
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
   </div>
 
+  <!-- Incluye jQuery desde un CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Incluye Popper.js desde un CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <!-- Incluye el JS de Bootstrap desde un CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Incluye un archivo JavaScript personalizado -->
   <script src="script.js"></script>
 </body>
 </html>
