@@ -71,7 +71,7 @@
         }
       }, false);
     });
-
+                                                       // togglecontrast = alternar contraste//
     var toggleContrastButton = document.getElementById('toggleContrast'); // Obtiene el botón de cambiar contraste.
     toggleContrastButton.addEventListener('click', function () { // Agrega un evento de clic al botón.
       document.body.classList.toggle('high-contrast'); // Alterna la clase 'high-contrast' en el cuerpo del documento.
